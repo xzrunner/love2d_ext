@@ -6,41 +6,45 @@ function Scene:initialize()
 end
 
 function Scene:reset()
-	for n,a in pairs(self.actors) do
-		a:reset()
+	for i, v in ipairs(self.actors) do
+		v:reset()
 	end
-	for n,b in pairs(self.buttons) do
-		b:reset()
+	for i, v in ipairs(self.buttons) do
+		v:reset()
 	end	
 end
 
+function Scene:load()
+	--
+end
+
 function Scene:draw()
-	for n,a in pairs(self.actors) do
-		a:draw()
+	for i, v in ipairs(self.actors) do
+		v:draw()
 	end
-	for n,b in pairs(self.buttons) do
-		b:draw()
+	for i, v in ipairs(self.buttons) do
+		v:draw()
 	end
 end
 
 function Scene:update(dt)
-	for n,a in pairs(self.actors) do
-		a:update(dt)
+	for i, v in ipairs(self.actors) do
+		v:update(dt)
 	end
-	for n,b in pairs(self.buttons) do
-		b:update(dt)
+	for i, v in ipairs(self.buttons) do
+		v:update(dt)
 	end
 end
 
 function Scene:mousepressed(x, y, button)
-	for n,b in pairs(self.buttons) do
-		b:mousepressed(x, y, button)
+	for i, v in ipairs(self.buttons) do
+		v:mousepressed(x, y, button)
 	end
 end
 
 function Scene:mousereleased(x, y, button)
-	for n,b in pairs(self.buttons) do
-		b:mousereleased(x, y, button)
+	for i, v in ipairs(self.buttons) do
+		v:mousereleased(x, y, button)
 	end
 end
 

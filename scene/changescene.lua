@@ -11,7 +11,8 @@ end
 function ChangeScene:act(dt)
 	if not self.finish then
 		state = scenes[self.scene]
-		state:reset()
+	--	state:reset()
+		state:load()
 		self.finish = true
 	end
 end

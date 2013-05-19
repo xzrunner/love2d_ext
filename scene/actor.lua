@@ -62,6 +62,10 @@ function Actor:setRotation(degree)
 	self.angle = degree * math.pi / 180
 end
 
+function Actor:getScale()
+	return self.sx
+end
+
 function Actor:setScale(scale)
 	self.sx = scale
 	self.sy = scale
